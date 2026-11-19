@@ -59,6 +59,13 @@ def save_file():
  
  messagebox.showinfo("Info", "File saved successfully")
 
+
+ # Menu
+menu = tk.Menu(root)
+root.config(menu=menu)
+
+file_menu= tk.Menu(menu)
+
 # starts and keeps the window open.
 root.mainloop()
 
