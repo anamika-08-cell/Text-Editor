@@ -45,6 +45,20 @@ def open_file():
             text.insert(tk.END, file.read())
 
 
+#function 3 - save the file
+def save_file():
+ #open save file dialogue
+ file_path= filedialog.askopenfilename(
+     defaultextension=" .txt", 
+     filetypes= [("Text Files", "*.txt")] 
+ )
+
+ if file_path:
+    with open(file_path, "w") as file:
+       file.write(text.get(1.0, tk.END))
+ 
+ messagebox.showinfo("Info", "File saved successfully")
+
 # starts and keeps the window open.
 root.mainloop()
 
