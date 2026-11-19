@@ -18,7 +18,7 @@ root.geometry("800x600")
 text = tk.Text(
     root,                     #parent window
     wrap = tk.WORD,           # wrap text by word (not char)
-    font = ("Helvetica", 12)  # font style & size.
+    font = ("Helvetica", 19)  # font style & size.
 
 )
 
@@ -33,7 +33,7 @@ def new_file( ):
 # function 2 - to open a new file.
 def open_file():
     #open file dialogue dikhana hoga.
-    file_path= filedialog.askopenfile(
+    file_path= filedialog.askopenfilename(
         defaultextension=" .txt", 
         filetypes= [("Text Files", "*.txt")]  
     )
@@ -48,8 +48,8 @@ def open_file():
 #function 3 - save the file
 def save_file():
  #open save file dialogue
- file_path= filedialog.askopenfilename(
-     defaultextension=" .txt", 
+ file_path= filedialog.asksaveasfilename(
+     defaultextension=".txt", 
      filetypes= [("Text Files", "*.txt")] 
  )
 
